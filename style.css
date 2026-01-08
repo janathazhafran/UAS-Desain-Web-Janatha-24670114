@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yellowtail&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    width: 100%;
+    background: #0a0119;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* ================= BACKGROUND ================= */
+.page1 {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Mencegah scroll samping */
+}
+
+/* Blob Ungu */
+.page1::before, .page1::after {
+    content: '';
+    position: absolute;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    background: #8665e4;
+    filter: blur(400px);
+    z-index: -1;
+}
+.page1::before { bottom: -10%; left: -10%; }
+.page1::after { top: 10%; right: -10%; }
+
+/* ================= NAVIGASI ================= */
+/* ================= NAVIGATION (FIXED / STICKY) ================= */
+nav {
+    /* Agar nempel di atas */
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    /* Agar berada di lapisan paling atas (di atas Spline & Konten) */
+    z-index: 1000; 
+    
+    /* Ukuran */
+    min-height: 6rem;
+    padding: 0.5rem 5%;
+    
+    /* Efek Kaca (Glassmorphism) */
+    background: rgba(10, 1, 25, 0.85); /* Latar gelap transparan */
+    backdrop-filter: blur(15px); /* Efek blur di belakangnya */
+    -webkit-backdrop-filter: blur(15px); /* Support untuk Safari */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Garis tipis di bawah */
+    
+    /* Layout Flex */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+/* Style Logo Link */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+    color: white;
+}
+
+.logo-img {
+    height: 55px; /* Sesuaikan ukuran logo */
+    width: auto;
+}
+
+nav h1.logo {
+    font-size: 2rem;
+    font-family: "Yellowtail", cursive;
+    font-weight: 400;
+    margin: 0;
+}
+
+.navigation {
+    display: flex;
+    gap: 2rem;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.navigation a:hover {
+    color: #b197ff;
+}
+
+/* ================= HERO SECTION (ATAS) ================= */
+.main {
+    min-height: 90vh; /* Mengisi layar */
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+    position: relative;
+}
+
+.main .left {
+    width: 55%;
+    padding-right: 2rem;
+    z-index: 2;
+}
+
+.greeting-text {
+    font-size: 1.5rem;
+    color: #b197ff;
+    font-family: "Yellowtail", cursive;
+    margin-bottom: 0.5rem;
+}
+
+.main .left h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.main .left p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.btn {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 2px solid white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#contact {
+    background: white;
+    color: #0a0119;
+}
+
+#contact:hover {
+    background: #8665e4;
+    border-color: #8665e4;
+    color: white;
+}
+
+#started {
+    background: transparent;
+    color: white;
+}
+
+#started:hover {
+    background: white;
+    color: #0a0119;
+}
+
+.main .right {
+    width: 45%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+spline-viewer {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.9);
+}
+
+/* ================= SECTION BAWAH (UMUM) ================= */
+.content-section {
+    padding: 5rem 5%;
+    position: relative;
+    z-index: 10;
+    background: rgba(10, 1, 25, 0.9); /* Background gelap agar tulisan jelas */
+    backdrop-filter: blur(10px);
+}
+
+.reasons-bg {
+    background: linear-gradient(to bottom, #0a0119, #15052e);
+}
+
+.section-title {
+    font-size: 3rem;
+    font-family: "Yellowtail", cursive;
+    text-align: center; /* JUDUL DI TENGAH */
+    margin-bottom: 3rem;
+    color: #b197ff;
+}
+
+/* ================= GRID SYSTEM (Agar Kartu Rapi) ================= */
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* KARTU DI TENGAH */
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto; /* CONTAINER DI TENGAH LAYAR */
+}
+
+/* Kartu Info / Alasan */
+.info-card {
+    flex: 1;
+    min-width: 280px; /* Lebar minimal agar tidak gepeng di HP */
+    max-width: 350px;
+    padding: 2rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center; /* TEKS DALAM KARTU DI TENGAH */
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    border-color: #8665e4;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.icon-box {
+    color: #8665e4;
+    margin-bottom: 1rem;
+    display: inline-block;
+    padding: 1rem;
+    border-radius: 50%;
+    background: rgba(134, 101, 228, 0.1);
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: white;
+}
+
+.info-card p {
+    color: #aaa;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Kartu Testimoni */
+.testi-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: #15082e;
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.testi-text {
+    font-style: italic;
+    color: #ddd;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.testi-user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testi-user img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #8665e4;
+}
+
+.testi-user h4 {
+    margin: 0;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.testi-user span {
+    font-size: 0.9rem;
+    color: #8665e4;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    padding: 4rem 1rem;
+    background: #03000a;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.logo-footer {
+    font-family: "Yellowtail", cursive;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.socials {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.socials a {
+    color: gray;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.socials a:hover { color: #8665e4; }
+
+.footer p { color: #555; font-size: 0.9rem; }/* ================= KONTAK FORM SECTION ================= */
+.contact-area {
+    background: linear-gradient(to top, #03000a, #0a0119);
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* --- Kolom Kiri (Info) --- */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h3 {
+    font-size: 2rem;
+    font-family: "Yellowtail", cursive;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.contact-info p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #ddd;
+}
+
+.info-item .icon {
+    font-size: 1.5rem;
+}
+
+/* --- Kolom Kanan (Form) --- */
+.contact-form-box {
+    flex: 1.5; /* Form lebih lebar sedikit */
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Style Input & Textarea */
+.contact-form-box input, 
+.contact-form-box textarea {
+    width: 100%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form-box input:focus, 
+.contact-form-box textarea:focus {
+    border-color: #8665e4;
+    box-shadow: 0 0 10px rgba(134, 101, 228, 0.2);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* Tombol Kirim */
+.btn-send {
+    width: 100%;
+    padding: 1rem;
+    background: #8665e4;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-send:hover {
+    background: white;
+    color: #3e108a;
+    transform: translateY(-3px);
+}
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr; 
+        grid-auto-rows: auto; /* Biarkan tinggi menyesuaikan konten atau set aspect ratio */
+        gap: 1.5rem;
+    }
+    .gallery-item {
+        height: 300px; /* Tinggi fix per item di HP */
+    }
+}
+.action-area {
+    text-align: center;
+    padding: 4rem 0; /* Memberi jarak nafas di atas dan bawah tombol */
+    position: relative;
+    z-index: 5;
+}
+
+/* Desain Tombol */
+.btn-glow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 1rem 2.5rem;
+    color: white;
+    text-decoration: none;
+    border: 1px solid rgba(134, 101, 228, 0.5); /* Garis tipis ungu */
+    border-radius: 50px; /* Bentuk kapsul */
+    font-family: "Playfair Display", serif; /* Font elegan */
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background: linear-gradient(45deg, transparent 50%, rgba(134, 101, 228, 0.1) 100%);
+    transition: all 0.4s ease;
+    backdrop-filter: blur(5px);
+}
+
+/* Animasi Hover (Saat mouse di atas tombol) */
+.btn-glow:hover {
+    background: #8665e4; /* Warna isi menjadi ungu */
+    border-color: #8665e4;
+    box-shadow: 0 0 25px rgba(134, 101, 228, 0.6); /* Efek cahaya (Glow) */
+    transform: translateY(-5px); /* Tombol naik sedikit */
+    padding-right: 3rem; /* Memberi ruang agar panah bergerak */
+}
+
+/* Animasi Panah SVG */
+.btn-glow svg {
+    transition: transform 0.4s ease;
+}
+
+.btn-glow:hover svg {
+    transform: translateX(5px); /* Panah bergerak ke kanan */
+}

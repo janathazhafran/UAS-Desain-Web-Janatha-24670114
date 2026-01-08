@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>MonoMuse</title>
+</head>
+
+<body>
+    <div class="page1">
+        
+        <nav>
+            <a href="" class="logo-link">
+                <img src="logo.png" alt="MonoMuse Logo" class="logo-img">
+                <h1 class="logo">MonoMuse</h1>
+            </a>
+            <div class="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+
+        <div class="main">
+            <div class="left">
+                <h2 class="greeting-text"><span id="greeting"></span>, Creatives.</h2>
+                <h1>Timeless Moments,<br>Captured in Soul.</h1>
+                <p>Bukan sekadar menekan tombol rana. Kami membekukan emosi, melukis cahaya, dan mengabadikan "Muse" di dalam diri Anda.</p>
+                <div class="btn">
+                    <button id="contact" onclick="window.location.href='contact.html'">Contact Us</button>
+                    <button id="started" onclick="document.getElementById('reasons').scrollIntoView({behavior: 'smooth'})">Explore</button>
+                </div>
+            </div>
+            
+            <div class="right"> 
+                <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.29/build/spline-viewer.js"></script>
+                <spline-viewer url="https://prod.spline.design/gZNkLRzCsK22DAfs/scene.splinecode"></spline-viewer>
+            </div>
+        </div> 
+        <div class="content-section reasons-bg" id="reasons">
+            <h2 class="section-title">Why MonoMuse?</h2>
+            
+            <div class="grid-container">
+                <div class="info-card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    </div>
+                    <h3>Soul Connection</h3>
+                    <p>Kami membangun koneksi personal. Hasilnya bukan sekadar foto wajah, tapi cerminan karakter dan emosi terdalam Anda.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <h3>Cinematic Touch</h3>
+                    <p>Setiap frame diedit dengan tone warna khas MonoMuse yang hangat, dreamy, dan terlihat seperti potongan film layar lebar.</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="icon-box">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <h3>Timeless Result</h3>
+                    <p>Kami menghindari tren sesaat. Gaya fotografi kami klasik dan elegan, sehingga tetap indah dilihat 10 atau 20 tahun lagi.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content-section">
+            <h2 class="section-title">Love Letters</h2>
+            <div class="grid-container">
+                
+                <div class="testi-card">
+                    <p class="testi-text">"Gak nyangka bakal sebagus ini. Timnya asik banget, bikin suasana cair jadi fotonya gak kaku. Tone warnanya juara!"</p>
+                    <div class="testi-user">
+                        <img src="https://i.pinimg.com/736x/a1/d0/cf/a1d0cfddd9c054647955d0e0be679df7.jpg" alt="Client">
+                        <div>
+                            <h4>Sarah A.</h4>
+                            <span>Portrait Session</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testi-card">
+                    <p class="testi-text">"Recommended banget buat prewed. Konsepnya unik dan beda dari yang lain. Hasilnya sangat aesthetic dan romantis."</p>
+                    <div class="testi-user">
+                        <img src="https://i.pinimg.com/736x/37/67/fc/3767fccbbf9fe83637b47141d814ced9.jpg" alt="Client">
+                        <div>
+                            <h4>Raka</h4>
+                            <span>Couple Session</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            <div class="content-section contact-area" id="message-section">
+            <h2 class="section-title">Let's Create Magic</h2>
+            
+            <div class="contact-container">
+                
+                <div class="contact-info">
+                    <h3>Get in Touch</h3>
+                    <p>Punya pertanyaan atau ide gila untuk sesi foto? Tulis pesan Anda di sini, dan mari kita wujudkan.</p>
+                    
+                    <div class="info-item">
+                        <span class="icon">📍</span>
+                        <span>Jl. Senopati No. 10, Jakarta Selatan</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📧</span>
+                        <span>hello@monomuse.id</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="icon">📞</span>
+                        <span>+62 812 3456 7890</span>
+                    </div>
+                </div>
+
+                <div class="contact-form-box">
+                    <form id="sendMessageForm">
+                        <div class="input-group">
+                            <input type="text" required placeholder="Nama Anda">
+                        </div>
+                        <div class="input-group">
+                            <input type="email" required placeholder="Alamat Email">
+                        </div>
+                        <div class="input-group">
+                            <textarea rows="5" required placeholder="Tulis pesan Anda di sini..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-send">Kirim Pesan</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+        <footer class="footer">
+            <div class="footer-content">
+                <h2 class="logo-footer">MonoMuse</h2>
+                <div class="socials">
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Email</a>
+                </div>
+                <p>&copy; 2026 MonoMuse Photography.</p>
+            </div>
+        </footer>
+
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
